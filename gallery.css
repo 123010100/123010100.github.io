@@ -13,6 +13,7 @@ body{
 	position: absolute;
 	top: 50%;
 	margin-top: -468px;
+	padding-bottom: 70px;
 	overflow: hidden;
 	  /*目前没有浏览器支持*/
 	-webkit-perspective:800px;
