@@ -16,6 +16,24 @@ function random( range ){
 
 //翻面控制函数
 function turn(elem) {
+	
+	
+	// 修复因未翻转回来导致的部分照片无法二次翻转
+	var photo = document.getElementsByClassName('photo');
+	for(var i =0; i<photo.length; i++){
+		var className = photo[i].className;
+		if(elem == photo[i]){
+			// pass
+		}else{
+			if(className.indexOf('photo_front') > -1){
+				// pass
+			}else{
+				photo[i].className = className+' photo_front';
+			}
+		}
+	}
+
+	
 	var cls = elem.className;
 	var n = elem.id.split('_')[1];
 
